@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="container">
+    <h3>Create Student</h3>
+  </div>
+  <form>
+    <mat-form-field hintLabel="Between 4 and 30 characters" appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input
+        matInput
+        name="createStudent.firstName"
+        [(ngModel)]="newStudent.firstName"
+        required
+      />
+      <!-- <mat-error *ngIf="newStudent.firstName">{{ getErrorMessage() }}</mat-error> -->
+    </mat-form-field>
+    <mat-form-field hintLabel="Between 4 and 30 characters" appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input
+        matInput
+        name="createStudent.lastName"
+        [(ngModel)]="newStudent.lastName"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>School Name</mat-label>
+      <mat-select
+        [(ngModel)]="newStudent.schoolId"
+        name="school"
+        class="form-select"
+        required
+      >
+        <mat-option *ngFor="let school of schoolsInput" [value]="school.id">
+          {{ school.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-mini-fab color="accent" (click)="createStudent()">
+      <mat-icon>send</mat-icon>
+    </button>
+  </form>
+</div>

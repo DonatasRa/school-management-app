@@ -1,0 +1,17 @@
+<br />
+<div class="container-fluid">
+  <h2 style="text-align: center">Students</h2>
+  <div class="container">
+    <app-student-list
+      (removeStudentEvent)="removeStudent($event)"
+      [studentInput]="students"
+    ></app-student-list>
+  </div>
+</div>
+<div class="container">
+  <app-create-student
+    (createStudentEvent)="createStudent($event)"
+    [schoolsInput]="schools"
+    (getSchoolsEvent)="getCurrentSchools()"
+  ></app-create-student>
+</div>

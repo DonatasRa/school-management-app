@@ -1,0 +1,15 @@
+<br />
+<div class="container-fluid">
+  <h2 style="text-align: center">Schools</h2>
+  <div class="container">
+    <app-school-list
+      (removeSchoolEvent)="removeSchool($event)"
+      [schoolInput]="schools"
+    ></app-school-list>
+  </div>
+</div>
+<div class="container">
+  <app-create-school
+    (createSchoolEvent)="createSchool($event)"
+  ></app-create-school>
+</div>

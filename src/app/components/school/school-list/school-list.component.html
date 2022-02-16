@@ -1,0 +1,20 @@
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let school of schoolInput">
+      <th scope="row">{{ school.id }}</th>
+      <td>{{ school.name }}</td>
+      <td>
+        <button mat-mini-fab color="accent" (click)="removeSchool(school.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

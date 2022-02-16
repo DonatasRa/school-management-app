@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="container">
+    <h3>Create School</h3>
+  </div>
+  <form>
+    <mat-form-field hintLabel="Between 4 and 30 characters" appearance="fill">
+      <mat-label>Enter School Name</mat-label>
+      <input matInput name="schoolName" [(ngModel)]="schoolName" />
+    </mat-form-field>
+    <button mat-mini-fab color="accent" (click)="createSchool()">
+      <mat-icon>send</mat-icon>
+    </button>
+  </form>
+</div>
